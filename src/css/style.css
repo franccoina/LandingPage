@@ -1,0 +1,668 @@
+:root{
+    --rojillo:  rgb(155, 35, 35);
+    --gris1: rgb(64, 64, 64);
+    --gris2: rgb(255, 255, 255, 0.6);
+    --gris3: rgb(193, 193, 193);
+    --gris4: rgb(123, 123, 123);
+    --gris5:rgb(115, 115, 115);
+    --gris6: rgb(74, 74, 74);
+    --cafe:rgb(135, 105, 105);
+    --negropacity:rgb(0, 0, 0, 0.7);
+    --graypacity1: rgba(157, 157, 157, 0.5);
+    --graypacity2: rgba(44, 44, 44, 0.5);
+    --graypacity3: rgba(0, 0, 0, 0.5);
+    --graypacity4: rgba(243, 243, 243, 0.5);
+    --blanco:white;
+    --negro:black;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    width: 1920;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+span{
+    font-size: 30px;
+    opacity: 0.5;
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+a, p{
+    color: var(--gris1);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+sub{
+    font-size: 20px;
+    color: var(--blanco);
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1,h2{
+    font-size: 80px;
+    opacity: 0.6;
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h3{
+    margin-bottom:20px;
+    font-size: 25px;
+    color: var(--gris2);
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+nav{
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    background-color: var(--blanco);
+    border-bottom: dashed 1px var(--gris1);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+}
+
+.logo{
+    margin:10px;
+    width: 5%;
+    height: auto;
+}
+
+.img-logo,.img-banner1{
+    width: 100%;
+    height: auto;
+}
+
+li{
+    margin: 10px;
+}
+
+.menu{
+    display: flex;
+    margin: 5px;
+}
+.menu :hover {
+    display: flex;
+    margin: 5px;
+    color: var(--rojillo);
+    font-size: 18px;
+}
+
+.banner1,.banner2{
+    background-color: var(--blanco);
+    width: 100%;
+}
+
+.title-banner1{
+    color:var(--gris2);
+    font-size: 120px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 17%;
+    left: 70%;
+}
+
+.sub-banner1{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 15%;
+    left: 70.5%;
+    color: var(--gris2);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#about{
+    padding: 90px;
+    margin-bottom: 50px;
+    background-color: var(--blanco);
+    display: flex;
+    justify-content: center;
+}
+
+.about-content{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#news{
+    background-color:var(--negropacity);
+    width: 100%;
+    height: auto;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.news{
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-intro{
+    margin-bottom: 70px;
+}
+
+.news-content{
+    gap: 20px;
+    width: inherit;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 
+    "news1 news1 news2 news3"
+    "news4 news5 news6 news6"
+}
+
+.news1 {
+    height: 15rem;
+    padding: 30px;
+    grid-area: news1;
+    background-color: var(--graypacity4);
+    & p{
+        font-size: 10px;
+        color:var(--blanco)
+    }
+    & a{
+        color: var(--gris1);
+    }
+}
+
+.news2 {
+    width: 15rem;
+    height: 15rem;
+    padding: 30px;
+    grid-area: news2;
+    background-image: url("https://indierocks.sfo3.cdn.digitaloceanspaces.com/wp-content/uploads/bfi_thumb/RelsB_PalaciodelosDeportes_ErnestoPareja-31-of-1-yz7e5ynv0chz9jrsllssrmwmb14f025ng7tmm7o1nqk5l2zfrdva90661nqkg.jpg");
+    background-size: cover;
+    & p{
+        font-size: 10px;
+        text-shadow: 1px 1px 0 var(--negro);
+        color:var(--blanco)
+    }
+}
+
+.news3 {
+    width: 15rem;
+    height: 15rem;
+    padding: 30px;
+    grid-area: news3;
+    background-color:var(--graypacity3);
+    & p{
+            font-size: 10px;
+            color: var(--blanco)
+    }
+    & a{
+        color: var(--gris2);
+    }
+}
+
+.news4 {
+    width: 15rem;
+    height: 15rem;
+    padding: 30px;
+    grid-area: news4;
+    background-color: var(--graypacity1);
+    & p{
+            font-size: 10px;
+            color: var(--blanco)
+    }
+    & a{
+        color: var(--gris1);
+    }
+}
+
+.news5 {
+    width: 15rem;
+    height: 15rem;
+    padding: 30px;
+    grid-area: news5;
+    background-image: url("https://shangay.com/wp-content/uploads/2024/04/@nilventura_@skinnyflakk-11-1100x624.jpg");
+    background-size: cover;
+    & p{
+            font-size: 10px;
+            text-shadow: 1px 1px 0 var(--negro);
+            color: var(--blanco)
+    }
+}
+
+.news6 {
+    height: 15rem;
+    padding: 30px;
+    grid-area: news6;
+    background-color: var(--graypacity2);
+    & p {
+        font-size: 10px;
+        color: var(--blanco)
+    }
+    & a{
+        color: var(--gris2);
+    }
+}
+
+#player{
+    background-color: var(--gris4);
+    width: 1920;
+    height: 200;
+    padding-top: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 100px;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+i{
+    font-size: 20px;
+    color: var(--blanco);
+}
+
+.player-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: inherit;
+    & p{
+        color: var(--blanco)
+    }
+}
+
+.player-feed{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buscador{
+    margin-bottom: 60px;
+    width: 100%;
+    height: 20%;
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar-buscador{
+    width: 60%;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 10px var(--gris3);
+}
+
+.albums{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    gap: 5px;
+}
+
+.albums div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    height: 100%; 
+}
+
+#video{
+    display: flex;
+    flex-direction: column;
+}
+
+.video-text{
+    margin: 60px;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.video{
+    width: 100%;
+    height: auto;
+}
+
+#tour{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tourYcontact-text{
+    margin: 60px;
+}
+
+iframe{
+    position: static;
+    width:100%;
+    margin-bottom:5px;
+    height:5rem
+}
+
+.maps{
+    width: 100%;
+    height: 15rem;
+    border: dashed var(--gris4) 2px;
+}
+
+#merch {
+    background-color: var(--blanco);
+    width: 100%;
+    height: auto;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.merch-intro {
+    align-self: end;
+    margin-bottom: 70px
+}
+
+.merch-content {
+    width: 100%;
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.merch-decoration{
+    display: flex;
+    width: 30%;
+    height: inherit;
+    align-self: center;
+    justify-self: center;
+    & img{
+        align-self: center;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.merch-decoration :hover{
+    display: flex;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.merch-div{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.merch-container{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    height: 8rem;
+}
+
+.merch{
+    background-color: var(--rojillo);
+    width: 15.6%;
+    margin: 0.5%;
+    height: 100%;
+    & a {
+        padding: 20px;
+        color: transparent
+    }
+}
+
+.merch :hover{
+    display: flex;
+    margin: 5px;
+    color: var(--rojillo);
+    font-size: 18px;
+    & a{
+        border: var(--gris1) solid 1px;  
+    }
+}
+
+.merch-larger{
+    background-color:var(--rojillo);
+    width: 32.3%;
+    margin: 0.5%;
+    height: 100%;
+    & a {
+        padding: 40px;
+        color: transparent
+    }
+}
+
+.merch-larger :hover {
+    border: var(--gris1) solid 1px;
+    display: flex;
+    margin: 5px;
+    color:var(--rojillo);
+    font-size: 18px;
+    & a{
+        border:none
+    }
+}
+
+.merch-img1,.merch-img2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color:var(--blanco)
+}
+
+.merch-img3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color:var(--blanco)
+}
+
+.merch-img4 {
+    border: 1px var(--gris1) solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://http2.mlstatic.com/D_NQ_NP_796468-MLU73665722298_012024-O.webp");
+    background-size: cover;
+}
+
+.merch-img5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color:var(--blanco)
+}
+
+.merch-img6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color:var(--blanco)
+}
+
+.merch-img7 {
+    border: 1px var(--gris1) solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://http2.mlstatic.com/D_NQ_NP_796468-MLU73665722298_012024-O.webp");
+    background-size: cover;
+}
+
+.merch-img8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color:var(--blanco)
+}
+
+.merch-img9 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color:var(--blanco)
+}
+
+.merch-img10 {
+    border: 1px solid var(--gris1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i1.sndcdn.com/artworks-QIu14GxHGVtbEmtp-t9omCw-t500x500.jpg");
+    background-size: cover;
+}
+
+#contacto{
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--gris5);
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+}
+
+.contacto-article{
+    align-self: center;
+    margin-top: 35px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto-text{
+    color: var(--blanco);
+}
+
+.contacto-icons{
+    align-self: center;
+    margin-top: 10px;
+    text-indent: 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    & input, textarea{
+        font-size: 15px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+}
+
+.contacto-formulario{
+    background-color: transparent;
+    padding: 5px;
+    width: 100%;
+}
+
+.contacto-formulario *{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding:10px;
+    border-radius: 5px;
+
+}
+
+.submit{
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    background-color: var(--blanco);
+    color: var(--gris1);
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.contacto-formulario textarea{
+    resize: none;
+}
+
+.endbar{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--gris6);
+}
